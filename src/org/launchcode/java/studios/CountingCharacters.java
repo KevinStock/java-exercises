@@ -23,11 +23,12 @@ public class CountingCharacters {
         char[] charactersInString = testText.toCharArray();
 
         for (int i = 0; i < charactersInString.length; i++) {
-            if (characters.containsKey(charactersInString[i])) {
-                characters.put(charactersInString[i], (int)characters.get(charactersInString[i]) + 1);
+            char currentChar = Character.toUpperCase(charactersInString[i]);
+            if (characters.containsKey(currentChar)) {
+                characters.put(currentChar, (int)characters.get(currentChar) + 1);
             }
             else {
-                characters.put(charactersInString[i], 1);
+                characters.put(currentChar, 1);
             }
         }
         System.out.println(characters.toString());
