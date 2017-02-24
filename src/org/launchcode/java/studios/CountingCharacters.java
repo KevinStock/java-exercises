@@ -10,7 +10,7 @@ public class CountingCharacters {
 
     public static void main(String[] args) {
 
-        HashMap characters = new HashMap();
+        HashMap<Character, Integer> characters = new HashMap<Character, Integer>();
 
 //        String testText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem ut ligula " +
 //                "scelerisque sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. " +
@@ -31,6 +31,9 @@ public class CountingCharacters {
                 characters.put(currentChar, 1);
             }
         }
-        System.out.println(characters.toString());
+        for (Character key : characters.keySet()) {
+            System.out.println(key + ": " + characters.get(key));
+        }
+
     }
 }
