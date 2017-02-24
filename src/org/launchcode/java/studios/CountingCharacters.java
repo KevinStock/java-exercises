@@ -19,6 +19,7 @@ public class CountingCharacters {
         Scanner in = new Scanner(System.in);
         System.out.println("Please provide a string: ");
         String testText = in.nextLine();
+        testText = testText.replaceAll("[^a-zA-Z]+","");
 
         char[] charactersInString = testText.toCharArray();
 
