@@ -25,10 +25,10 @@ public class CountingCharacters {
 //        String testText = in.nextLine();
 //        testText = testText.replaceAll("[^a-zA-Z]+","");
 
-        String fileName = "text.txt";
+        String fileName = "src/org/launchcode/java/studios/text.txt";
         String line = null;
         String testText = null;
-
+        
         try {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -42,8 +42,8 @@ public class CountingCharacters {
         } catch(IOException ex) {
             System.out.println("Error reading file '" + fileName + "'");
         }
-        System.out.println(testText);
 
+        testText = testText.replaceAll("[^a-zA-Z]+","");
         char[] charactersInString = testText.toCharArray();
 
         for (int i = 0; i < charactersInString.length; i++) {
