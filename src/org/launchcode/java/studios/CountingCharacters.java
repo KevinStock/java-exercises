@@ -1,9 +1,8 @@
 package org.launchcode.java.studios;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -25,6 +24,9 @@ public class CountingCharacters {
 //        String testText = in.nextLine();
 //        testText = testText.replaceAll("[^a-zA-Z]+","");
 
+        String[] base = {System.getProperty("user.dir", "src")};
+        String dir = String.join(File.separator, base);
+        System.out.println(dir);
         String fileName = "src/org/launchcode/java/studios/text.txt";
         String line = null;
         String testText = null;
@@ -45,6 +47,7 @@ public class CountingCharacters {
 
         testText = testText.replaceAll("[^a-zA-Z]+","");
         char[] charactersInString = testText.toCharArray();
+
 
         for (int i = 0; i < charactersInString.length; i++) {
             char currentChar = Character.toUpperCase(charactersInString[i]);
