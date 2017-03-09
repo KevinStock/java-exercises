@@ -17,7 +17,8 @@ public class Area {
             System.out.print("Enter a radius: ");
             radius = in.nextInt();
         }
-        double area = Math.PI * radius * radius;
+        Double area = Math.PI * radius * radius;
         System.out.println("The area of a circle of radius " + radius + " is: " + area);
+
     }
 }
