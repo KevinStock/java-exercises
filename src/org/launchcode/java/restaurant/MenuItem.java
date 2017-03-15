@@ -1,6 +1,7 @@
 package org.launchcode.java.restaurant;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Created by kevinstock on 3/11/17.
@@ -54,6 +55,10 @@ public class MenuItem {
         this.category = category;
     }
 
+    public Date getCreated() {
+        return created;
+    }
+
     public boolean isNewItem() {
         long diff =  new Date().getTime() - this.created.getTime();
         System.out.println(diff);
@@ -64,13 +69,34 @@ public class MenuItem {
     }
 
     @Override
+    public boolean equals(Object o) {
+        // self check
+        if (this == o)
+            return true;
+
+        // null check
+        if (o == null)
+            return false;
+
+        // type check and cast
+        if (getClass() != o.getClass())
+            return false;
+
+        MenuItem item = (MenuItem) o;
+
+        // field comparison
+        return Objects.equals(name, item.getName())
+                && getPrice() == item.getPrice()
+                && getDescription() == item.getDescription()
+                && getCategory() == item.getCategory();
+    }
+
+    @Override
     public String toString() {
-        return "MenuItem{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", category='" + category + '\'' +
-                ", created=" + created +
-                '}';
+        return "Menu Item " + name + "\n" +
+                "\tPrice: $" + price + "\n" +
+                "\tDescription: " + description + "\n" +
+                "\tCategory: " + category + "\n" +
+                "\tCreated: " + created + "\n\n";
     }
 }

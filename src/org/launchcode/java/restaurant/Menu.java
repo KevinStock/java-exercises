@@ -11,6 +11,7 @@ public class Menu {
 
     private String name;
     public ArrayList<MenuItem> menuItems = new ArrayList<>();
+    public Date created = new Date();
     public Date lastUpdate = new Date();
 
     public Menu(String name) {
@@ -40,12 +41,25 @@ public class Menu {
         this.setLastUpdate(new Date());
     }
 
+    public void removeItemFromMenu(MenuItem item) {
+        this.menuItems.remove(item);
+        this.setLastUpdate(new Date());
+    }
+
     @Override
     public String toString() {
-        return "Menu{" +
-                "menuItems=" + menuItems +
-                ", lastUpdate=" + lastUpdate +
-                '}';
+
+        String text = "Menu Name: " + name + "\n" +
+                "Created: " + created + "\n" +
+                "Last Updated: " + lastUpdate + "\n" +
+                "Menu Items:\n";
+        for (MenuItem item : menuItems) {
+            text += "\tName: " + item.getName() + "\n" +
+                    "\tPrice: $" + item.getPrice() + "\n" +
+                    "\tDescription: " + item.getDescription() + "\n" +
+                    "\tCreated: " + item.getCreated() + "\n\n";
+        }
+        return text;
     }
 
 }
