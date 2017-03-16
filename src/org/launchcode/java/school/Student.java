@@ -7,6 +7,11 @@ import java.util.Objects;
  */
 public class Student {
 
+    public static final String FRESHMAN = "Freshman";
+    public static final String SOPHOMORE = "Sophomore";
+    public static final String JUNIOR = "Junior";
+    public static final String SENIOR = "Senior";
+
     private static int nextStudentId = 1;
     private String name;
     private int studentId;
@@ -63,19 +68,19 @@ public class Student {
     public String getGradeLevel() {
         // less than 30 credits is a freshman
         if (this.getCredits() < 30) {
-            return "Freshman";
+            return FRESHMAN;
         }
         // 30 - 60 credits is a sophomore
-        else if (this.getCredits() >= 30 && credits < 60) {
-            return "Sophomore";
+        else if (this.getCredits() >= 30 && this.getCredits() < 60) {
+            return SOPHOMORE;
         }
         // 60 - 90 credits is a junior
-        else if (this.getCredits() >= 60 && credits < 90) {
-            return "Junior";
+        else if (this.getCredits() >= 60 && this.getCredits() < 90) {
+            return JUNIOR;
         }
         // 90 or more credits is a senior
         else if (this.getCredits() >= 90) {
-            return "Senior";
+            return SENIOR;
         }
         return "Error";
     }
