@@ -28,6 +28,8 @@ public class Restaurant {
         MenuItem mi3 = new MenuItem("Grilled Cheese Sandwich", 1.75, "Grilled Cheese on White Bread", "Main");
         lunchMenu.addItemToMenu(mi3);
 
+        MenuItem mi4 = mi1;
+
         System.out.println(mi1.toString());
         System.out.println(mi2.toString());
 
@@ -36,5 +38,7 @@ public class Restaurant {
         System.out.println(lunchMenu.toString());
         breakfastMenu.removeItemFromMenu(mi2);
         System.out.println(breakfastMenu.toString());
+
+        System.out.println(mi1.equals(mi4));
     }
 }

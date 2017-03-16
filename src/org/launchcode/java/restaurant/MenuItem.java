@@ -85,7 +85,7 @@ public class MenuItem {
         MenuItem item = (MenuItem) o;
 
         // field comparison
-        return Objects.equals(name, item.getName())
+        return name.equals(item.getName())
                 && getPrice() == item.getPrice()
                 && getDescription() == item.getDescription()
                 && getCategory() == item.getCategory();

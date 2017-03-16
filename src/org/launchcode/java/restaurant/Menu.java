@@ -47,6 +47,17 @@ public class Menu {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Menu menu = (Menu) o;
+
+        if (!name.equals(menu.name)) return false;
+        return created.equals(menu.created);
+    }
+
+    @Override
     public String toString() {
 
         String text = "Menu Name: " + name + "\n" +
