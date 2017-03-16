@@ -1,5 +1,6 @@
 package org.launchcode.java.restaurant;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ public class MenuItem {
 
     public MenuItem(String name, double price, String description, String category) {
         this.name = name;
-        this.price = price;
+        this.price = roundTwo(price);
         this.description = description;
         this.category = category;
         this.created = created;
@@ -68,7 +69,10 @@ public class MenuItem {
         return false;
     }
 
-    @Override
+    private static double roundTwo(double input) {
+        return new BigDecimal(input).setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+    }
+
     public boolean equals(Object o) {
         // self check
         if (this == o)
