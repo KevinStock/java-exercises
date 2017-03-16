@@ -30,15 +30,16 @@ public class Restaurant {
 
         MenuItem mi4 = mi1;
 
-        System.out.println(mi1.toString());
-        System.out.println(mi2.toString());
+        System.out.println(mi1);
+        System.out.println(mi2);
 
         System.out.println("-----------------------");
-        System.out.println(breakfastMenu.toString());
-        System.out.println(lunchMenu.toString());
+        System.out.println(breakfastMenu);
+        System.out.println(lunchMenu);
         breakfastMenu.removeItemFromMenu(mi2);
-        System.out.println(breakfastMenu.toString());
+        System.out.println(breakfastMenu);
 
         System.out.println(mi1.equals(mi4));
+
     }
 }
