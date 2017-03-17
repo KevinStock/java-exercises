@@ -39,8 +39,12 @@ public class Menu {
     }
 
     public void removeItemFromMenu(MenuItem item) {
-        this.menuItems.remove(item);
-        this.setLastUpdate(new Date());
+        for (MenuItem i : this.getMenuItems()) {
+            if (i.equals(item)) {
+                this.menuItems.remove(item);
+                this.setLastUpdate(new Date());
+            }
+        }
     }
 
     public double getAverageItemPrice() {
