@@ -30,6 +30,16 @@ public class Course {
         return courseCredit;
     }
 
+    public boolean addStudent(Student s) {
+        for (Student student : roster) {
+            if (student.equals(s)) {
+                return false;
+            }
+        }
+        this.roster.add(s);
+        return true;
+    }
+
     public boolean equals(Object o) {
         // self check
         if (this == o)

@@ -86,13 +86,10 @@ public class Student {
     }
 
     public boolean equals(Object o) {
-
         if (this == o)
             return true;
-
         if (o == null)
             return false;
-
         if (getClass() != o.getClass())
             return false;
 
@@ -103,10 +100,10 @@ public class Student {
     }
 
     public String toString() {
-        return "Student Name: " + name + "\n" +
-                "Student ID: " + studentId + "\n" +
-                "Credits: " + credits + "\n" +
-                "Quality Score: " + qualityScore + "\n" +
-                "GPA: " + gpa;
+        return "Student Name:\t" + name + "\n" +
+                "Student ID:\t" + studentId + "\n" +
+                "Credits:\t" + credits + "\n" +
+                "Quality Score:\t" + qualityScore + "\n" +
+                "GPA:\t" + gpa;
     }
 }
