@@ -2,7 +2,6 @@ package org.launchcode.java.restaurant;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by kevinstock on 3/11/17.
@@ -16,8 +15,6 @@ public class Menu {
 
     public Menu(String name) {
         this.name = name;
-        this.menuItems = menuItems;
-        this.lastUpdate = lastUpdate;
     }
 
     public ArrayList<MenuItem> getMenuItems() {
@@ -73,7 +70,7 @@ public class Menu {
                 "Created: " + created + "\n" +
                 "Last Updated: " + lastUpdate + "\n" +
                 "Menu Items:\n";
-        for (MenuItem item : menuItems) {
+        for (MenuItem item : this.getMenuItems()) {
             text += "\tName: " + item.getName() + "\n" +
                     "\tPrice: $" + item.getPrice() + "\n" +
                     "\tDescription: " + item.getDescription() + "\n" +

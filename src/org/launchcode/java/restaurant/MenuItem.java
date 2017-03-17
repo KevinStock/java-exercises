@@ -2,7 +2,6 @@ package org.launchcode.java.restaurant;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.Objects;
 
 /**
  * Created by kevinstock on 3/11/17.
