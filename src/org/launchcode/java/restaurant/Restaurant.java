@@ -30,6 +30,9 @@ public class Restaurant {
 
         MenuItem mi4 = mi1;
 
+        MenuItem mi5 = new MenuItem("Scrambled Eggs", 0.75, "2 Eggs - Scrambled", "Side");
+        breakfastMenu.addItemToMenu(mi5);
+
         System.out.println(mi1);
         System.out.println(mi2);
 
@@ -41,5 +44,6 @@ public class Restaurant {
 
         System.out.println(mi1.equals(mi4));
 
+        System.out.println(breakfastMenu.getAverageItemPrice());
     }
 }

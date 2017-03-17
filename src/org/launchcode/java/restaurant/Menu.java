@@ -46,6 +46,15 @@ public class Menu {
         this.setLastUpdate(new Date());
     }
 
+    public double getAverageItemPrice() {
+        double sum = 0.0;
+        int count = getMenuItems().size();
+        for (MenuItem item : getMenuItems()) {
+            sum += item.getPrice();
+        }
+        return sum / count;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

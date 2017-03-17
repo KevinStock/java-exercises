@@ -21,7 +21,6 @@ public class MenuItem {
         this.price = roundTwo(price);
         this.description = description;
         this.category = category;
-        this.created = created;
     }
 
     public String getName() {
