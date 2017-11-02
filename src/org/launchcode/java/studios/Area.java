@@ -17,7 +17,7 @@ public class Area {
             System.out.print("Enter a radius: ");
             radius = in.nextInt();
         }
-        Double area = Math.PI * radius * radius;
+        double area = Math.round((Math.PI * radius * radius) * 1000.0) / 1000.0;
         System.out.println("The area of a circle of radius " + radius + " is: " + area);
 
     }
